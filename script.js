@@ -1,7 +1,7 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
-// Collect employee data
+// Collect employee data (first name, last name and salary) and establish a while loop to add records as long as the manager wants to continue adding new employees to the table. Stop when the manager no longer wants to include a new record to the table.
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
   let addRecord = true;
@@ -14,13 +14,15 @@ const collectEmployees = function() {
     if (firstNameInput && lastNameInput && employeeSalaryInput) {
       employee.firstName = firstNameInput;
       employee.lastName = lastNameInput;
-      if(isNaN(employeeSalaryInput)) {
+      //If the employeeSalaryInput is not a number, default the value to 0
+      if(isNaN(employeeSalaryInput)) { 
         employee.salary = 0;
       } else {
         employee.salary = Number(employeeSalaryInput);
       }
     }
 
+    //Include new employee data to the table, and ask the manager if he wants to add or not a new record to the table
     employees.push(employee);
     let nextEmployee = confirm("Do you want to include a new employee?");
     if(!nextEmployee){
@@ -31,7 +33,7 @@ const collectEmployees = function() {
 
 } 
 
-// Display the average salary
+// Display the average salary of the employees included in the table 
 const displayAverageSalary = function(employeesArray) {
   let sumSalary = 0;
   let numberEmployees = 0;
@@ -42,17 +44,17 @@ const displayAverageSalary = function(employeesArray) {
   console.log(`The average salary of your employees is: ${sumSalary/numberEmployees}`)
   }
 
-  // TODO: Calculate and display the average salary
-// Select a random employee
+  //Obtains the first name of a random employee and displays it in the console; this employee is considered as a "random employee winner" for a raffle
 const getRandomEmployee = function(employeesArray) {
   let randomEmployee = employeesArray[Math.floor(Math.random(employeesArray.length))];  
   console.log(employeesArray);
   console.log(randomEmployee);
-  console.log(`The name of your random employee is ${randomEmployee.firstName}`);
+  console.log(`Congratulations to ${randomEmployee.firstName}, our random employee winner!`);
   return randomEmployee;
 
-  // TODO: Select and display a random employee
+
 }
+//Starter code, was not modified during the editing of the source code
 
 /*
   ====================

@@ -1,9 +1,11 @@
+/* Incorporation of the border box */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Styling for the body */
 html,
 body,
 .wrapper {
@@ -23,6 +25,7 @@ body {
   padding-right: 20px;
 }
 
+/* Styling for the header */
 header {
   text-align: center;
   padding: 20px;
@@ -30,10 +33,12 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/* Styling for the subtitle */
 h2 {
   text-align: center;
 }
 
+/* Styling for the class card */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -58,6 +63,7 @@ h2 {
   min-height: 100px;
 }
 
+/* Styling for the employee roster table */
 table {
   width:100%;
   border-spacing: 0;
@@ -73,6 +79,7 @@ tbody tr:nth-child(even) {
   background-color: hsl(223, 64%, 90%);
 }
 
+/* Styling for the footer, including the "add employee" button */
 .card-footer {
   text-align: center;
 }
@@ -91,6 +98,7 @@ tbody tr:nth-child(even) {
   clear: both;
 }
 
+/* Styling for the button */
 .btn {
   border: none;
   background-color: hsl(223, 74%, 48%);
@@ -115,7 +123,7 @@ button[disabled] {
   float: right;
 }
 
-
+/* Responsiveness */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
