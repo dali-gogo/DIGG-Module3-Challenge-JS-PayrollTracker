@@ -46,7 +46,7 @@ const displayAverageSalary = function(employeesArray) {
 
   //Obtains the first name of a random employee and displays it in the console; this employee is considered as a "random employee winner" for a raffle
 const getRandomEmployee = function(employeesArray) {
-  let randomEmployee = employeesArray[Math.floor(Math.random(employeesArray.length))];  
+  let randomEmployee = employeesArray[Math.floor(Math.random() * employeesArray.length)];  
   console.log(employeesArray);
   console.log(randomEmployee);
   console.log(`Congratulations to ${randomEmployee.firstName}, our random employee winner!`);
